@@ -42,3 +42,5 @@ sudo install -m 644 backup-pull@.service backup-pull@.timer /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable --now backup-pull@backup-host.timer
 ```
+
+Don't forget to set up passwordless SSH login to `backup-host`, so rsync can pull data.
